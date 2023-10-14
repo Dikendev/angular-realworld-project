@@ -1,0 +1,15 @@
+<header>
+  <a routerLink="" class="logo">Conduit</a>
+  <ul class="nav-bar">
+    <ng-container *ngFor="let item of menu(); let i = index">
+      <li
+        [routerLink]="item.url"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <span class="material-symbols-outlined">{{ item.icon }}</span>
+        {{ item.title }}
+      </li>
+    </ng-container>
+  </ul>
+</header>
